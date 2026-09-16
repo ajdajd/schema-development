@@ -32,6 +32,22 @@ The exact paper samples are frozen in `data/manifests/`.
 uv run python scripts/fetch_data.py
 ```
 
+The fetcher pins Hugging Face dataset revision
+`626f3c54ba6d8f6e0ba0795f9e544e24b2650faf`; the CSV manifests select the
+paper's exact development and held-out files from that revision.
+
+## Reproduction modes
+
+For exact offline reproduction, use the checked-in files under `artifacts/`
+and run the analysis notebooks listed below. This route requires no API key and
+recomputes the reported summaries and figures from the retained model outputs.
+
+A fresh model-supported run is a replication attempt, not a byte-identical
+reproduction. It requires the source data, an OpenAI API key, and the execution
+notebooks or scripts listed below. Model nondeterminism and API changes can
+produce different responses; fresh outputs remain under the gitignored
+`runs/` directory and do not replace the paper artifacts.
+
 ## Reproduce the reported analyses
 
 Run notebooks in this order:

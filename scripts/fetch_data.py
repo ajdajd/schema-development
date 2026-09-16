@@ -10,7 +10,11 @@ from pathlib import Path
 from urllib.parse import quote
 
 
-DATASET_URL = "https://huggingface.co/datasets/ai4data/data-snapshot/resolve/main"
+DATASET_REVISION = "626f3c54ba6d8f6e0ba0795f9e544e24b2650faf"
+DATASET_URL = (
+    "https://huggingface.co/datasets/ai4data/data-snapshot/resolve/"
+    f"{DATASET_REVISION}"
+)
 
 
 def materialize(

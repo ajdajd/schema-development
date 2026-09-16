@@ -3,7 +3,13 @@
 import csv
 from pathlib import Path
 
-from scripts.fetch_data import materialize
+from scripts.fetch_data import DATASET_REVISION, DATASET_URL, materialize
+
+
+def test_dataset_downloads_use_the_frozen_revision() -> None:
+    """Remote materialization is pinned to the study's dataset revision."""
+    assert len(DATASET_REVISION) == 40
+    assert DATASET_URL.endswith(DATASET_REVISION)
 
 
 def test_materialize_copies_manifest_files(tmp_path: Path) -> None:
