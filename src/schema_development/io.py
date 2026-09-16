@@ -1,4 +1,4 @@
-"""Small JSON helpers used by the historical notebooks."""
+"""Small JSON helpers shared by the schema-development notebooks."""
 
 import json
 from pathlib import Path

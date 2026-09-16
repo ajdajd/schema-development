@@ -80,6 +80,10 @@ main case-study evidence. Its runner uses
 `artifacts/appendix_h/evaluated_schema_v1.2.schema.json`, the exact pre-amendment
 contract used by that run.
 
+The package and notebook names retain `validation3` as a historical internal
+label for this Appendix H post-study comparison. Canonical prompts and
+configuration live under `src/schema_development/validation3/`.
+
 ## Tests
 
 ```shell
@@ -90,4 +94,3 @@ uv run pytest -q
 
 Code is released under the MIT License. Source documents and snapshot images
 remain subject to their original providers' terms.
-
