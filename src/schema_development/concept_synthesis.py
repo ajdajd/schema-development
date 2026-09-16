@@ -17,7 +17,7 @@ SYSTEM_PROMPT_PATH = ROOT / "notebooks/schema_discovery/prompts/ontology_system.
 USER_PROMPT_PATH = ROOT / "notebooks/schema_discovery/prompts/ontology_user.md"
 FIELD_PROFILES_PATH = ROOT / "artifacts/discovery/3.0-field_profiles.csv"
 MODEL = "gpt-5.5"
-# MAX_OUTPUT_TOKENS = 12000
+MAX_OUTPUT_TOKENS = 12000
 OUTPUT_JSON_PATH = ROOT / "runs/discovery/3.1-ontology_v0.json"
 
 
@@ -50,7 +50,7 @@ def induce_ontology() -> None:
 
     response = client.responses.create(
         model=MODEL,
-        # max_output_tokens=MAX_OUTPUT_TOKENS,
+        max_output_tokens=MAX_OUTPUT_TOKENS,
         reasoning={"effort": "high"},
         input=[
             {
